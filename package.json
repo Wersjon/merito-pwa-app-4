@@ -1,0 +1,21 @@
+{
+  "name": "pwa-4",
+  "version": "1.0.0",
+  "description": "Aplikacja przechowującą lokalnie prognozę pogody na kilka dni do przodu oraz karteczki samoprzylepne.",
+  "main": "public/src/app.js",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "keywords": [
+    "javascript",
+    "web",
+    "offline",
+    "api",
+    "indexeddb"
+  ],
+  "author": "Jakub 'Wersjon' Sobacki",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

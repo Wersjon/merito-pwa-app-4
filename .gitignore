@@ -1,0 +1,4 @@
+# Nodes modulsy
+/node_modules
+# testy pozostałość po testach dockeryzacji
+/docker
