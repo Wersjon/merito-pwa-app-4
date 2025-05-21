@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" sizes="192x192" href="icons/icon-192x192.png" />
+    <link rel="icon" sizes="512x512" href="icons/icon-512x512.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PWA-4</title>
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <a class="header-link" href="./index.html"><h1>Aplikacja PWA-4</h1></a>
+      <nav>
+        <span class="active">Strona główna</span>
+        <a href="./sticky-notes.html">Karteczki samoprzylepne</a>
+        <a href="./weather.html">Pogoda</a>
+      </nav>
+    </header>
+    <main>
+      <div class="dashboard-cards">
+        <a href="./weather.html" class="dashboard-card weather-card">
+          <div class="dashboard-card-header">Pogoda</div>
+          <div class="dashboard-card-desc">
+            Sprawdzaj aktualną pogodę w wybranym mieście oraz przeglądaj
+            historię wyszukiwań. Dane są automatycznie zapisywane lokalnie i
+            odświeżane co 24 godziny. Prognoza obejmuje temperaturę, wiatr, opis
+            oraz prognozę na kolejne dni.
+          </div>
+        </a>
+        <a href="./sticky-notes.html" class="dashboard-card">
+          <div class="dashboard-card-header">Karteczki samoprzylepne</div>
+          <div class="dashboard-card-desc">
+            Twórz, edytuj i usuwaj własne karteczki samoprzylepne. Wszystkie
+            karteczki są przechowywane lokalnie w przeglądarce i dostępne
+            offline. Możesz dowolnie zarządzać swoimi notatkami w prostym i
+            wygodnym interfejsie.
+          </div>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <hr />
+      <p>Aplikacja PWA-4 by Jakub Sobacki.</p>
+    </footer>
+    <script src="./src/app.js" type="module"></script>
+  </body>
+</html>
