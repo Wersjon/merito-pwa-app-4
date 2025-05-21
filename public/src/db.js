@@ -103,6 +103,20 @@ function editStickyNote(id, newContent) {
 }
 
 // Weather brrrrrrr
+function saveWeather(weatherObj) {
+  return openDatabase().then((db) => {
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(["weather"], "readwrite");
+      const store = transaction.objectStore("weather");
+      const request = store.put(weatherObj);
+
+      request.onsuccess = () => resolve("Weather saved");
+      request.onerror = (event) =>
+        reject("Error saving weather: " + event.target.errorCode);
+    });
+  });
+}
+
 function getWeather(id) {
   return openDatabase().then((db) => {
     return new Promise((resolve, reject) => {
@@ -140,6 +154,7 @@ async function getWeatherWithRefresh(id) {
     });
     return data;
   } catch (e) {
+    console.log({ e });
     // Ewentualnie próba z cache'u o ile jest
     if (cached && cached.data) return cached.data;
     throw e;
