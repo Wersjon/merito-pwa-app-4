@@ -21,7 +21,11 @@ Aplikacja PWA-4 by Jakub Sobacki.
    npm install
    ```
 
-1. Odpal appkę :D
+1. Odpal appkę lokalnie :D
    ```sh
    npm start
    ```
+
+### lub...
+
+odpal: https://sobacki.pl/pwa_app_4
