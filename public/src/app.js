@@ -8,6 +8,24 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+function updateStatus() {
+  const statusText = document.getElementById("status-text");
+  if (navigator.onLine) {
+    statusText.textContent = "Online";
+    statusText.style.color = "#000";
+    statusText.parentElement.style.color = "#000";
+    statusText.parentElement.style.background = "#ffd600";
+  } else {
+    statusText.textContent = "Offline";
+    statusText.style.color = "#f00";
+    statusText.parentElement.style.color = "#f22";
+    statusText.parentElement.style.background = "#111";
+  }
+}
+window.addEventListener("online", updateStatus);
+window.addEventListener("offline", updateStatus);
+window.addEventListener("DOMContentLoaded", updateStatus);
+
 // Service Worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker

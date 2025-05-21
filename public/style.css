@@ -130,6 +130,11 @@ nav {
   padding: 1rem;
 }
 
+footer {
+  align-items: center;
+  flex-direction: row;
+}
+
 ul,
 ol {
   margin-top: 0;
@@ -144,7 +149,6 @@ li {
 hr {
   border: 0;
   border-top: 1px solid #e6e6de;
-  margin: 2rem 0;
 }
 
 table {
@@ -416,12 +420,40 @@ thead {
   line-height: 1.5;
 }
 
+.connection-status {
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 1.05rem;
+  background: #ffd600;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+.connection-status span {
+  font-weight: bold;
+  color: #000;
+  transition: color 0.3s;
+}
+
 @media (max-width: 900px) {
   .dashboard-cards {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
   }
+}
+
+.vertical-hr {
+  width: 1px;
+  height: auto;
+  background: #e6e6de;
+  border: none;
+  margin: 0 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  align-self: stretch;
 }
 
 @media (max-width: 600px) {
